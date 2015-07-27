@@ -1,7 +1,7 @@
 {
   "name": "hubot-dvb",
   "description": "hubot script to get current dvb information",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "author": "Kilian Koeltzsch <me@kilian.io>",
   "license": "MIT",
   "keywords": "hubot,hubot-scripts,dresden,public,transport,dvb",

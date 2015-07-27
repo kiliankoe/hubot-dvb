@@ -32,4 +32,8 @@ hubot>> 85 Striesen Niederwaldpl. in 26 Minuten
         85 Striesen Niederwaldpl. in 28 Minuten
         85 Löbtau Süd Mohorner Str. in 34 Minuten
         85 Striesen Niederwaldpl. in 39 Minuten
+
+user1>> hubot find stop zelle
+hubot>> Did you mean _Zellescher Weg_?
+        http://maps.google.com/maps/api/staticmap?markers=51.028366%2C13.745847&size=400x400&maptype=roadmap&sensor=false&format=png
 ```
