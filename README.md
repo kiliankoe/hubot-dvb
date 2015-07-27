@@ -21,6 +21,9 @@ Then add **hubot-dvb** to your `external-scripts.json`:
 ## Sample Interaction
 
 ```
-user1>> hubot hello
-hubot>> hello!
+user1>> hubot dvb Helmholtzstraße
+hubot>> 85 Striesen Niederwaldpl. in 6 Minuten
+        85 Striesen Niederwaldpl. in 8 Minuten
+        85 Löbtau Süd Mohorner Str. in 14 Minuten
+        85 Striesen Niederwaldpl. in 19 Minuten
 ```
