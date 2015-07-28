@@ -1,16 +1,16 @@
 {
   "name": "hubot-dvb",
   "description": "hubot script to get current dvb information",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "author": "Kilian Koeltzsch <me@kilian.io>",
   "license": "MIT",
   "keywords": "hubot,hubot-scripts,dresden,public,transport,dvb",
   "repository": {
     "type": "git",
-    "url": "git://github.com/hubot-scripts/hubot-dvb.git"
+    "url": "git://github.com/kiliankoe/hubot-dvb.git"
   },
   "bugs": {
-    "url": "https://github.com/hubot-scripts/hubot-dvb/issues"
+    "url": "https://github.com/kiliankoe/hubot-dvb/issues"
   },
   "dependencies": {
     "dvbjs": "^3.1.1"

@@ -23,7 +23,7 @@ format_connection = (connection) ->
 
 module.exports = (robot) ->
   # Match "dvb zellescher weg"
-  robot.respond /^dvb (\D*)$/, (res) ->
+  robot.respond /dvb (\D*)$/, (res) ->
     hst = res.match[1]
     dvb.monitor hst, 0, 4, (err, data) ->
       res.reply "That didn't seem to work :/ - #{err}" if err?
