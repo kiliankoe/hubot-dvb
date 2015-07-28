@@ -19,6 +19,11 @@
 dvb = require 'dvbjs'
 
 format_connection = (connection) ->
+  if connection.arrivaltime == 0
+    "#{connection.line} #{connection.direction} jetzt"
+  else if connection.arrivaltime == 1
+    "#{connection.line} #{connection.direction} in #{connection.arrivaltime} Minute"
+  else
     "#{connection.line} #{connection.direction} in #{connection.arrivaltime} Minuten"
 
 module.exports = (robot) ->
