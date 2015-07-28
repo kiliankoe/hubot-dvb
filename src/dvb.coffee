@@ -23,7 +23,7 @@ format_connection = (connection) ->
 
 module.exports = (robot) ->
   # Match "dvb zellescher weg"
-  robot.respond /dvb\s+(.*) (?!.*in)/, (res) ->
+  robot.respond /^dvb (\D*)$/, (res) ->
     hst = res.match[1]
     dvb.monitor hst, 0, 4, (err, data) ->
       res.reply "That didn't seem to work :/ - #{err}" if err?
@@ -51,5 +51,5 @@ module.exports = (robot) ->
       if data.length == 0
         res.reply "Couldn't find anything for _#{stop}_"
         return
-      searchString = encodeURIComponent "#{data.coords[0]},#{data.coords[1]}"
-      res.send "Did you mean _#{data.stop}_?\nhttp://maps.google.com/maps/api/staticmap?markers=#{searchString}&size=400x400&maptype=roadmap&sensor=false&format=png"
+      searchString = encodeURIComponent "#{data[0].coords[0]},#{data[0].coords[1]}"
+      res.send "Did you mean _#{data[0].stop}_?\nhttp://maps.google.com/maps/api/staticmap?markers=#{searchString}&size=400x400&maptype=roadmap&sensor=false&format=png"
