@@ -23,7 +23,7 @@ format_connection = (connection) ->
 
 module.exports = (robot) ->
   # Match "dvb zellescher weg"
-  robot.respond /dvb (\D*)$/, (res) ->
+  robot.respond /dvb (\D*)$/i, (res) ->
     hst = res.match[1]
     dvb.monitor hst, 0, 4, (err, data) ->
       res.reply "That didn't seem to work :/ - #{err}" if err?
@@ -33,7 +33,7 @@ module.exports = (robot) ->
       res.send data.map(format_connection).join('\n')
 
   # Match "dvb zellescher weg in 10 minuten"
-  robot.respond /dvb\s+(.*)in (\d*)/, (res) ->
+  robot.respond /dvb\s+(.*)in (\d*)/i, (res) ->
     hst = res.match[1]
     vz = res.match[2]
     dvb.monitor hst, vz, 4, (err, data) ->
@@ -44,7 +44,7 @@ module.exports = (robot) ->
       res.send data.map(format_connection).join('\n')
 
   # Match "find stop zelle"
-  robot.respond /find stop\s+(.*)/, (res) ->
+  robot.respond /find stop\s+(.*)/i, (res) ->
     stop = res.match[1]
     dvb.find stop, (err, data) ->
       res.reply "That didn't seem to work :/ - #{err}" if err?
