@@ -1,5 +1,8 @@
 # hubot-dvb
 
+[![](https://img.shields.io/npm/v/hubot-dvb.svg)](https://www.npmjs.com/package/hubot-dvb)
+[![](https://img.shields.io/david/kiliankoe/hubot-dvb.svg)](http://david-dm.org/kiliankoe/hubot-dvb)
+
 hubot script to get current dvb information
 
 See [`src/dvb.coffee`](src/dvb.coffee) for full documentation.
